@@ -1,0 +1,9 @@
+@use './utilities/constant.scss';
+
+#root {
+  max-width: constant.$large;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+

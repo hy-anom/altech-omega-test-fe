@@ -1,0 +1,22 @@
+@use '../utilities/constant.scss';
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 4rem;
+  outline: 1px solid rebeccapurple;
+  text-transform: uppercase;
+  padding: 0 1rem;
+
+  @media screen and (min-width: constant.$large) {
+    max-width: constant.$large;
+  }
+
+  .right-side {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem
+  }
+}
