@@ -1,17 +1,33 @@
-import { Link } from 'react-router-dom'
 import './Navbar.scss'
 
-function Navbar() {
+type props = {
+  refToOtherComponent: {
+    refToContactComponent: React.MutableRefObject<HTMLDivElement | null>
+    refToPricingComponent: React.MutableRefObject<HTMLDivElement | null>
+    refToAboutComponent: React.MutableRefObject<HTMLDivElement | null>
+  }
+}
+
+function Navbar({ refToOtherComponent }: props) {
+  const scrolltoComponent = (component: 'refToAboutComponent' | 'refToPricingComponent' | 'refToContactComponent') => {
+    if (refToOtherComponent[component]) {
+      if (refToOtherComponent[component].current) {
+        refToOtherComponent[component].current.scrollIntoView();
+      }
+    }
+    
+  };
+
   return (
     <nav>
       <div className='left-side'>
-        <Link to='/'>home</Link>
+        <a href='#'>home</a>
       </div>
       <div className='right-side'>
-        <Link to='/about'>about</Link>
-        <Link to='/pricing'>pricing</Link>
-        <Link to='/contact'>contact</Link>
-        <Link to='/login'>login</Link>
+        <a href='#' onClick={() => scrolltoComponent('refToAboutComponent')}>about</a>
+        <a href='#' onClick={() => scrolltoComponent('refToPricingComponent')}>pricing</a>
+        <a href='#' onClick={() => scrolltoComponent('refToContactComponent')}>contact</a>
+        <a className='button' href='#'>login</a>
       </div>
     </nav>
   )

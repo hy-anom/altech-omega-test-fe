@@ -1,8 +1,19 @@
+import { forwardRef, useImperativeHandle, useRef } from 'react';
 import './Pricing.scss';
 
-function Pricing() {
+const Pricing = forwardRef((props, ref) => {
+  const pricingRef = useRef<null | HTMLDivElement>(null); 
+
+  useImperativeHandle(ref, () => ({
+    scrollIntoView: () => {
+      if(pricingRef.current) {
+        pricingRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }));
+
   return (
-    <div className='pricing'>
+    <div id='pricing' className='pricing' ref={pricingRef}>
       <h1>Fair pricing.</h1>
       <h4>Produk kami cocok untuk segala macam bisnis baik kecil maupun besar. Jika anda ragu anda bisa mencoba dulu secara gratis selama 1 bulan.</h4>
 
@@ -53,6 +64,6 @@ function Pricing() {
       </div>
     </div>
   )
-}
+});
 
 export default Pricing

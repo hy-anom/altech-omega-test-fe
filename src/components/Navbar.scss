@@ -1,22 +1,51 @@
 @use '../utilities/constant.scss';
+@use '../utilities/color.scss';
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 4rem;
-  outline: 1px solid rebeccapurple;
+  height: 6rem;
   text-transform: uppercase;
   padding: 0 1rem;
+  margin: auto;
 
   @media screen and (min-width: constant.$large) {
-    max-width: constant.$large;
+    max-width: 1200px;
+  }
+
+  .left-side {
+    a {
+      color: color.$white;
+    }
   }
 
   .right-side {
     display: flex;
     align-items: center;
-    gap: 1.5rem
+    gap: 1.5rem;
+  }
+
+  a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: color.$jet;
+    &:hover {
+      color: color.$french-gray;
+    }
+  }
+
+  .button {
+    background-color: color.$white;
+    border: 3px solid color.$vivid-sky-blue;
+    color: color.$vivid-sky-blue;
+    font-size: 1rem;
+    padding: 0.5rem 3rem;
+    border-radius: 1rem;
+
+    &:hover {
+      color: color.$vivid-sky-blue;
+    }
   }
 }

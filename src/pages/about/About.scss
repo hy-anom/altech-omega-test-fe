@@ -1,4 +1,9 @@
+@use '../../utilities/color.scss';
+
 .about {
+  margin-top: 16rem;
+  padding-top:2rem;
+
   .about-col-wrapper {
     display: flex;
     max-width: 1000px;
@@ -12,5 +17,20 @@
 
   .about-team-image {
     width: 100%;
+  }
+
+  .blob-wrapper {
+    position: relative;
+  }
+  .blob-2 {
+    width: 2000px;
+    height: 1000px;
+    background-color: color.$vivid-sky-blue;
+    position: absolute;
+    z-index: -100;
+    top: -30rem;
+    left: 20rem;
+    border-radius: 1000rem;
+    opacity: 0.1;
   }
 }

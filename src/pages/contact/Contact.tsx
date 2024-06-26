@@ -1,8 +1,19 @@
+import { forwardRef, useImperativeHandle, useRef } from "react";
 import './Contact.scss';
 
-function Contact() {
+const Contact = forwardRef((props, ref) => {
+  const contactRef = useRef<null | HTMLDivElement>(null); 
+  
+  useImperativeHandle(ref, () => ({
+    scrollIntoView: () => {
+      if(contactRef.current) {
+        contactRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }));
+
   return (
-    <div>
+    <div id='contact' className='contact' ref={contactRef}>
       <h1>Jangan ragu hubungi kami.</h1>
       <div className='contact-form'>
         <h2>Kirim pesanmu sekarang</h2>
@@ -33,6 +44,6 @@ function Contact() {
       </div>
     </div>
   )
-}
+});
 
 export default Contact
