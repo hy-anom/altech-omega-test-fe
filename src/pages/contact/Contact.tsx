@@ -3,19 +3,19 @@ import './Contact.scss';
 function Contact() {
   return (
     <div>
-      <h1>We've been waiting for you.</h1>
+      <h1>Jangan ragu hubungi kami.</h1>
       <div className='contact-form'>
-        <h2>Send us a Message</h2>
+        <h2>Kirim pesanmu sekarang</h2>
         <input type='text' placeholder='Your name'/>
         <input type='email' placeholder='Email'/>
-        <input type='text' placeholder='Business name'/>
+        <input type='text' placeholder='Message'/>
         <input type='tel' placeholder='Phone number'/>
         <button>Submit</button>
       </div>
 
       <div className='contact-info'>
-        <div className='contact-info-capsule'>Contact Information</div>
-        <h2>Come and visit our offices around the world</h2>
+        <div className='contact-info-capsule'>Informasi kontak</div>
+        <h2>Anda bisa mendatangi kantor kami dibawah ini</h2>
         <div className='contact-card-wrapper'>
           <div className='contact-card'>
             <p>☎️</p>

@@ -1,0 +1,60 @@
+@use '../../utilities/color.scss';
+
+.pricing {
+  h4 {
+    max-width: 550px;
+    margin: auto;
+  }
+
+  .pricing-card-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 4rem;
+  }
+
+  .pricing-card {
+    border: 1px solid color.$platinum;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem 1rem;
+
+    ul {
+      text-align: left;
+      color: color.$french-gray;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+
+    .price-low {
+      color: color.$vivid-green;
+    }
+
+    .price-mid {
+      color: color.$vivid-sky-blue;
+    }
+
+    .price-high {
+      color: color.$brandeis-blue;
+    }
+
+    &.card-price-low {
+      border-top: 6px solid color.$vivid-green;
+    }
+
+    &.card-price-mid {
+      border-top: 6px solid color.$vivid-sky-blue;
+    }
+
+    &.card-price-high {
+      border-top: 6px solid color.$brandeis-blue;
+    }
+  }
+
+}
