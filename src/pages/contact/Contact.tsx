@@ -17,11 +17,11 @@ const Contact = forwardRef((props, ref) => {
       <h1>Jangan ragu hubungi kami.</h1>
       <div className='contact-form'>
         <h2>Kirim pesanmu sekarang</h2>
-        <input type='text' placeholder='Your name'/>
+        <input type='text' placeholder='Nama'/>
+        <input type='text' placeholder='Pesan'/>
         <input type='email' placeholder='Email'/>
-        <input type='text' placeholder='Message'/>
-        <input type='tel' placeholder='Phone number'/>
-        <button>Submit</button>
+        <input type='tel' placeholder='Nomor telepon'/>
+        <button>Kirm</button>
       </div>
 
       <div className='contact-info'>

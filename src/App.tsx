@@ -5,6 +5,7 @@ import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Pricing from './pages/pricing/Pricing';
 import Hero from "./pages/hero/Hero";
+import Footer from "./components/Footer";
 
 function App () {
   const refToAboutComponent = useRef<HTMLInputElement>(null);
@@ -18,6 +19,7 @@ function App () {
       <About ref={refToAboutComponent}/>
       <Pricing ref={refToPricingComponent}/>
       <Contact ref={refToContactComponent}/>
+      <Footer /> 
     </>
   )
 }

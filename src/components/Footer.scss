@@ -1,0 +1,15 @@
+@use '../utilities/color.scss';
+
+.footer {
+  padding: 4rem 2rem 2rem 2rem;
+  background-color: color.$vivid-sky-blue;
+  color: color.$white;
+  border-top-left-radius: 6rem;
+  border-top-right-radius: 6rem;
+
+  p {
+    width: 400px;
+    margin: auto;
+    margin-top: 2rem;
+  }
+}
